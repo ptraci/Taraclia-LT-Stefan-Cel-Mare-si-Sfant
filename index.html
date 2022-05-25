@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ștefan cel Mare și Sfânt</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+    <link rel="icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!-- efecte pentru bara de navigare -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+
+
+    <script src="js/lightbox.js" defer></script>
+
+    <!-- includem script pentru a fi dinamica data si altele -->
+    <script src="js/main.js" defer>
+    </script>
+    <!-- defer inseamna ca script se va activa dupa ce am incarcat pagina -->
+    <script src="js/slider.js" defer>
+    </script>
+</head>
+
+<body>
+    <header data-aos="fade-down">
+        <a href="index.html">
+            <img src="images/sigla.png">
+        </a>
+        <navbar class="nav" id="navbar">
+            <a onclick="mobile()" href="#despre">Despre noi</a>
+            <a onclick="mobile()" href="#galerie">Galerie</a>
+            <a onclick="mobile()" href="#contacte">Contacte</a>
+            <a href="pages/orar.html">Orar</a>
+            <a href="pages/noutati.html">Noutăți</a>
+            <i onclick="mobile()" class="fa fa-bars hamburger" aria-hidden="true"></i>
+        </navbar>
+    </header>
+    <section id="intro">
+        <div class="intro-content" data-aos="fade-in" data-aos="fade-in" data-aos-delay="400">
+            <img class="logo" src="images/sigla.png">
+            <h1> LT „Ștefan cel Mare și Sfânt”</h1>
+            <h2> Școala care te învață să înveți
+            </h2>
+            <a class="intro-btn" id="despre-btn" href="#despre"> Despre noi</a>
+            <a class="intro-btn" href="pages/noutati.html"> Noutăți</a>
+            <a class="intro-btn" href="pages/orar.html"> Orar</a>
+        </div>
+        <div class="custom-shape-divider-bottom-1647973333">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <main>
+        <section id="despre" data-aos="fade-in">
+            <h1 class="centered"> Despre noi</h1>
+
+            <i class="fas fa-graduation-cap fly1"></i>
+            <i class="fas fa-pencil-alt fly2"></i>
+            <i class="fas fa-book fly3"></i>
+
+            <i class="fas fa-graduation-cap fly4"></i>
+            <i class="fas fa-pencil-alt fly5"></i>
+            <i class="fas fa-book fly6"></i>
+
+            <i class="fas fa-graduation-cap fly7"></i>
+            <i class="fas fa-pencil-alt fly8"></i>
+            <i class="fas fa-book fly9"></i>
+
+            <p class="p-despre">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur soluta necessitatibus dicta corrupti blanditiis nam fugiat praesentium error id, modi optio, delectus aspernatur quasi? Illum mollitia delectus distinctio libero possimus.
+            </p>
+            <div class="slideshow">
+                <div class="slide">
+                    <div class="slide-text">
+                        <i class="fas fa-user-tie"></i>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dignissimos. Voluptas, velit ipsa dolor enim eum, amet omnis harum quasi aliquid laudantium.
+                        </p>
+                    </div>
+                    <img src="images/s1.jpg">
+                </div>
+                <div class="slide">
+                    <div class="slide-text">
+                        <i class="fas fa-book"></i>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dignissimos. Voluptas, velit ipsa dolor enim eum, amet omnis harum quasi aliquid laudantium.
+                        </p>
+                    </div>
+                    <img src="images/s2.jpg">
+                </div>
+                <div class="slide">
+                    <div class="slide-text">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dignissimos. Voluptas, velit ipsa dolor enim eum, amet omnis harum quasi aliquid laudantium.
+                        </p>
+                    </div>
+                    <img src="images/s3.jpg">
+                </div>
+            </div>
+        </section>
+        <section id="galerie" data-aos="fade-in">
+            <h1 class="centered"> Galerie</h1>
+            <i class="fas fa-graduation-cap fly1"></i>
+            <i class="fas fa-book fly3"></i>
+
+            <i class="fas fa-pencil-alt fly5"></i>
+            <i class="fas fa-book fly6"></i>
+
+            <i class="fas fa-graduation-cap fly7"></i>
+            <i class="fas fa-pencil-alt fly8"></i>
+            <div class="container-galerie">
+                <a data-aos="zoom-in" data-aos-delay="400" href="images/p6.jpg">
+                    <img src="images/p6.jpg">
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="600" href="images/p2.jpg">
+                    <img src="images/p2.jpg">
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="800" href="images/p1.jpg">
+                    <img src="images/p1.jpg">
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="1000" href="images/p5.jpg">
+                    <img src="images/p5.jpg">
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="1200" href="images/p4.jpg">
+                    <img src="images/p4.jpg">
+                </a>
+                <a data-aos="zoom-in" data-aos-delay="1400" href="images/p3.jpg">
+                    <img src="images/p3.jpg">
+                </a>
+            </div>
+        </section>
+        <section id="contacte" data-aos="fade-in">
+            <h1 class="centered"> Contacte</h1>
+            <div class="row">
+                <div class="col-50 contacte-info">
+                    <b>Telefon </b>
+                    <a href="tel:+37369943863">+373 69943863</a>
+                    <br/>
+                    <b>Adresa</b>
+                    <span> Str.Ștefan cel Mare 10</span>
+                    <br/>
+                    <b>E-mail:</b>
+                    <a href="mailto:liceu.taraclia@gmail.com"> liceu.taraclia@gmail.com</a>
+                    <br/>
+                    <div class="formular-container">
+                        <form id="formular">
+                            <h3>Lasă un mesaj</h3>
+                            <input type="text" id="nume" placeholder="Nume" required>
+                            <br/>
+                            <!-- required semnifica obligatoriu -->
+                            <input type="email" id="email" placeholder="Email" required>
+                            <br/>
+                            <textarea id="mesaj" rows="4" placeholder="Mesajul" required></textarea>
+                            <br/>
+                            <input type="button" value="transmite" onclick="send()">
+                        </form>
+
+
+                    </div>
+                </div>
+                <div class="col-50">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21942.51540464574!2d29.120075!3d46.571135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc9f62429a4d41aca!2sLiceul%20Teoretic%20Stefan%20cel%20Mare%20%C8%99i%20Sfint!5e0!3m2!1sro!2sus!4v1649875680121!5m2!1sro!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy" class="harta" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div> IPLT Ștefan cel Mare și Sfânt ©️ </div>
+        <div id="an">2022</div>
+    </footer>
+</body>
+
+</html>
