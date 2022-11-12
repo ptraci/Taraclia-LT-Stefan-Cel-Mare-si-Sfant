@@ -63,9 +63,9 @@
 
     function getWindowHeight() {
 
-        return 'innerHeight' in window
-            ? window.innerHeight
-            : document.documentElement.offsetHeight;
+        return 'innerHeight' in window ?
+            window.innerHeight :
+            document.documentElement.offsetHeight;
 
     }
 
@@ -131,13 +131,13 @@
 
             if (options.elements) {
                 elements = [].slice.call(
-                    typeof options.elements === 'string'
-                        ? document.querySelectorAll(options.elements)
-                        : options.elements
+                    typeof options.elements === 'string' ?
+                    document.querySelectorAll(options.elements) :
+                    options.elements
                 );
             }
 
-            this.eventRegistry = {lightbox: [], thumbnails: []};
+            this.eventRegistry = { lightbox: [], thumbnails: [] };
             this.items = [];
             this.captions = [];
 
@@ -252,7 +252,7 @@
 
                     self.$content.innerHTML =
                         '<p class="slbLoadingText ' + options.loadingTextClass + '">' +
-                            options.loadingCaption +
+                        options.loadingCaption +
                         '</p>';
                     self.show();
 
@@ -277,8 +277,7 @@
             if (this.options.videoRegex.test(url)) {
 
                 callback.call(self, parseHtml(
-                    '<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>')
-                );
+                    '<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>'));
 
             } else {
 
@@ -290,8 +289,7 @@
 
                 if (this.options.showCaptions && this.captions[position]) {
                     $imageCont.appendChild(parseHtml(
-                        '<div class="slbCaption">' + this.captions[position] + '</div>')
-                    );
+                        '<div class="slbCaption">' + this.captions[position] + '</div>'));
                 }
 
                 this.loadImage(url, function() {
@@ -330,22 +328,22 @@
 
                 this.$el = parseHtml(
                     '<div class="slbElement ' + o.elementClass + '">' +
-                        '<div class="slbOverlay"></div>' +
-                        '<div class="slbWrapOuter">' +
-                            '<div class="slbWrap">' +
-                                '<div class="slbContentOuter">' +
-                                    '<div class="slbContent"></div>' +
-                                    '<button type="button" title="' + o.closeBtnCaption + '" class="slbCloseBtn ' + o.closeBtnClass + '">×</button>' +
-                                    (this.items.length > 1
-                                        ? '<div class="slbArrows">' +
-                                             '<button type="button" title="' + o.prevBtnCaption + '" class="prev slbArrow' + o.prevBtnClass + '">' + o.prevBtnCaption + '</button>' +
-                                             '<button type="button" title="' + o.nextBtnCaption + '" class="next slbArrow' + o.nextBtnClass + '">' + o.nextBtnCaption + '</button>' +
-                                          '</div>'
-                                        : ''
-                                    ) +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
+                    '<div class="slbOverlay"></div>' +
+                    '<div class="slbWrapOuter">' +
+                    '<div class="slbWrap">' +
+                    '<div class="slbContentOuter">' +
+                    '<div class="slbContent"></div>' +
+                    '<button type="button" title="' + o.closeBtnCaption + '" class="slbCloseBtn ' + o.closeBtnClass + '">×</button>' +
+                    (this.items.length > 1 ?
+                        '<div class="slbArrows">' +
+                        '<button type="button" title="' + o.prevBtnCaption + '" class="prev slbArrow' + o.prevBtnClass + '">' + o.prevBtnCaption + '</button>' +
+                        '<button type="button" title="' + o.nextBtnCaption + '" class="next slbArrow' + o.nextBtnClass + '">' + o.nextBtnCaption + '</button>' +
+                        '</div>' :
+                        ''
+                    ) +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
                     '</div>'
                 );
 
@@ -376,10 +374,9 @@
 
         setContent: function(content) {
 
-            var $content = typeof content === 'string'
-                ? parseHtml(content)
-                : content
-            ;
+            var $content = typeof content === 'string' ?
+                parseHtml(content) :
+                content;
 
             this.loading(false);
 
@@ -389,9 +386,9 @@
             removeClass(this.$content, 'slbDirectionPrev');
 
             if (this.direction) {
-                addClass(this.$content, this.direction === 'next'
-                    ? 'slbDirectionNext'
-                    : 'slbDirectionPrev'
+                addClass(this.$content, this.direction === 'next' ?
+                    'slbDirectionNext' :
+                    'slbDirectionPrev'
                 );
             }
 
@@ -497,9 +494,9 @@
 
         var instance = new SimpleLightbox(options);
 
-        return options.content
-            ? instance.setContent(options.content).show()
-            : instance.showPosition(instance.options.startAt);
+        return options.content ?
+            instance.setContent(options.content).show() :
+            instance.showPosition(instance.options.startAt);
 
     };
 
@@ -512,7 +509,7 @@
 
             return this.each(function() {
                 if (!$.data(this, 'simpleLightbox')) {
-                    lightboxInstance = lightboxInstance || new SimpleLightbox($.extend({}, options, {$items: $items}));
+                    lightboxInstance = lightboxInstance || new SimpleLightbox($.extend({}, options, { $items: $items }));
                     $.data(this, 'simpleLightbox', lightboxInstance);
                 }
             });
